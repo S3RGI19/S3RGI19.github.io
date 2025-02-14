@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "Sergi Sánchez Orvay"
+title: "Sergi Sánchez Orvay: Personal Website"
 markdown: kramdown
 ---
 
