@@ -25,7 +25,6 @@
         background-color: rgba(#ffd68d, 0.7);
         border-radius: 4px;
         font-size: 13px;
-        // color: #999;
         padding: 10px;
         margin-top: 10px;
         max-width: 200px;
@@ -51,29 +50,18 @@
     #green { background-color: mediumseagreen; }
 }
 {%- endif -%}
-// Textures
+
+/* Textures */
 .texture-black {
     background-image: url('{{ site.baseurl }}/assets/textures/black.jpg');
-
-    h2 {
-        color: #999;
-    }
+    h2 { color: #999; }
 }
 
 .texture-blue {
     background-image: url('{{ site.baseurl }}/assets/textures/blue.jpg');
-
-    h2 {
-        color: #ddd;
-    }
-
-    .social i:hover {
-        color: #eee;
-    }
-
-    .post-date {
-        color: #ccc;
-    }
+    h2 { color: #ddd; }
+    .social i:hover { color: #eee; }
+    .post-date { color: #ccc; }
 }
 
 .texture-red {
@@ -86,27 +74,70 @@
 
 .texture-green {
     background-image: url('{{ site.baseurl }}/assets/textures/green.jpg');
-
-    .post-date {
-        color: #ccc;
-    }
+    .post-date { color: #ccc; }
 }
 
-.texture-red,
-.texture-purple {
-    h2 {
-        color: #ccc;
-    }
-
+.texture-red, .texture-purple {
+    h2 { color: #ccc; }
     .social i {
         color: #ddd;
+        &:hover { color: lighten(#ddd, 7%); }
+    }
+    .post-date { color: #ddd; }
+}
 
-        &:hover {
-            color: lighten(#ddd, 7%);
-        }
+/* Header layout */
+.header-container {
+    display: flex;
+    align-items: center; /* Centers text and image vertically */
+    justify-content: space-between; /* Moves text left, image right */
+    text-align: left;
+    padding: 5vh 5vw; /* Proportional padding */
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Profile image adjustments */
+.header-image img {
+    width: 20vw; /* Increased size while scaling proportionally */
+    max-width: 250px; /* Ensures image doesn’t get too big */
+    min-width: 140px; /* Ensures image doesn’t get too small */
+    border-radius: 50%;
+    margin-left: 3vw; /* Proportional margin */
+}
+
+/* Content container - FIXES THE RIGHT-SIDE TEXT MARGIN */
+.container {
+    max-width: 900px; /* Restricts text width for better readability */
+    margin: 0 auto; /* Centers the content */
+    padding: 20px; /* Adds spacing on the sides */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 8vw; /* Adjust spacing on small screens */
     }
 
-    .post-date {
-        color: #ddd;
+    .header-text {
+        text-align: center;
+    }
+
+    .header-image {
+        justify-content: center;
+        margin-top: 5vw;
+    }
+
+    .header-image img {
+        width: 25vw; /* Slightly larger on smaller screens */
+        max-width: 200px; /* Prevents too much scaling */
+        min-width: 120px;
+    }
+
+    /* Adjust text width for smaller screens */
+    .container {
+        max-width: 90%; /* Uses more width but keeps margins */
+        padding: 10px;
     }
 }
