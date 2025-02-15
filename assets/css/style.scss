@@ -141,3 +141,121 @@
         padding: 10px;
     }
 }
+
+.work-entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+    flex-wrap: wrap; /* Allows text wrapping */
+}
+
+.work-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between logo and text */
+    flex: 1; /* Takes up full space */
+}
+
+.work-left img {
+    width: 50px; /* Fixed logo size */
+    height: auto;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+.work-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Ensures it takes full space */
+}
+
+.company-name {
+    display: block;
+    font-weight: normal;
+}
+
+.company-link {
+    text-decoration: none;
+    font-size: 14px;
+    color: #666;
+    margin-left: 5px;
+}
+
+.work-right {
+    font-weight: bold;
+    text-align: right;
+    white-space: nowrap; /* Prevents date from breaking */
+    flex-shrink: 0; /* Ensures time period stays aligned */
+}
+
+.education-entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+    flex-wrap: wrap; /* Allows automatic wrapping for long names */
+}
+
+.education-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between logo and text */
+    flex: 1; /* Takes up remaining space */
+}
+
+.education-left img {
+    width: 50px; /* Logo size */
+    height: auto;
+    flex-shrink: 0; /* Prevents logo from shrinking */
+}
+
+.education-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Ensures it takes up remaining space */
+}
+
+.university-name {
+    display: block;
+    font-weight: normal;
+}
+
+.university-link {
+    text-decoration: none;
+    font-size: 14px;
+    color: #666;
+    margin-left: 5px;
+}
+
+.education-right {
+    font-weight: bold;
+    text-align: right;
+    white-space: nowrap; /* Prevents date from breaking */
+    flex-shrink: 0; /* Ensures time period stays aligned */
+}
+
+/* Contact Section */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds spacing between items */
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    font-size: 16px;
+}
+
+.contact-icon {
+    width: 20px; /* Ensures both icons have the same size */
+    height: 20px;
+    vertical-align: middle;
+    flex-shrink: 0; /* Prevents icons from resizing unexpectedly */
+}
+
